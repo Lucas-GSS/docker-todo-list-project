@@ -4,4 +4,4 @@ ADD node_modules.tar.gz /frontend-app/
 COPY . .
 RUN npm install
 EXPOSE 3000
-ENTRYPOINT npm start
+ENTRYPOINT ["npm start"]
