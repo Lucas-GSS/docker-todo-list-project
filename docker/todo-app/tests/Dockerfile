@@ -1,6 +1,5 @@
-FROM mjgargani/puppeteer:trybe1.0
+FROM mjgargani/puppeteer:trybe1.0 AS todotests
 WORKDIR /tests
-ADD node_modules.tar.gz /tests
+ADD node_modules.tar.gz .
 COPY . .
-ENV FRONT_HOST=localhost FRONT_PORT=3000
-ENTRYPOINT ["npm test"]
+CMD ["npm", "test"]
